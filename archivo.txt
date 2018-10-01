@@ -40,3 +40,10 @@ INSERT INTO users (id, first_name, email, last_name) VALUES (3, 'Tomás', 'tomas
 SELECT first_name, count(calls) FROM users INNER JOIN calls ON (users.id = calls.user_id) GROUP BY first_name;
 
 SELECT phone, date FROM calls WHERE user_id = 1 ORDER BY date DESC; 
+
+CREATE TABLE auditoria(
+phone VARCHAR(50),
+date VARCHAR(50),
+motive TEXT,
+user_id INTEGER
+);
